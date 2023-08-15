@@ -738,7 +738,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8bd45b0fba7be1842a838da94651e3c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waves: []
+  onWaveChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &253676700
 Transform:
   m_ObjectHideFlags: 0
@@ -17223,6 +17225,7 @@ GameObject:
   - component: {fileID: 1206891268}
   - component: {fileID: 1206891270}
   - component: {fileID: 1206891269}
+  - component: {fileID: 1206891271}
   m_Layer: 5
   m_Name: LifeBar
   m_TagString: Untagged
@@ -17288,6 +17291,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1206891267}
   m_CullTransparentMesh: 1
+--- !u!114 &1206891271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1206891267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8f5cb799303fa40a928aec187ed297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLife: {fileID: 1376312815}
 --- !u!1001 &1261116119
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17707,7 +17723,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b44c11bf345281b4993039d87199e84c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  amount: 500
+  amount: 0
+  maximunLife: 1000
   onDeath:
     m_PersistentCalls:
       m_Calls: []
@@ -18536,6 +18553,7 @@ GameObject:
   - component: {fileID: 1569823714}
   - component: {fileID: 1569823716}
   - component: {fileID: 1569823715}
+  - component: {fileID: 1569823717}
   m_Layer: 5
   m_Name: LifeBar
   m_TagString: Untagged
@@ -18601,6 +18619,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1569823713}
   m_CullTransparentMesh: 1
+--- !u!114 &1569823717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1569823713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c8f5cb799303fa40a928aec187ed297, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targetLife: {fileID: 751068720}
 --- !u!1 &1593271530
 GameObject:
   m_ObjectHideFlags: 0
@@ -19464,7 +19495,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 87df291bf779a0d4e809c584f5996341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemies: []
+  onEnemyChanged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!4 &1880593883
 Transform:
   m_ObjectHideFlags: 0
@@ -24871,6 +24904,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 628766015242584766, guid: 4d3d473d78845264e9381fc821419fd5, type: 3}
+      propertyPath: amount
+      value: 100
+      objectReference: {fileID: 0}
     - target: {fileID: 4960241763699248589, guid: 4d3d473d78845264e9381fc821419fd5, type: 3}
       propertyPath: m_Height
       value: 2.0464401
