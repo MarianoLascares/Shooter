@@ -12,6 +12,12 @@ public class WaveManager : MonoBehaviour
         get => waves.Count;
     }
 
+    private int maxWaves;
+    public int MaxWaves
+    {
+        get => maxWaves;
+    }
+
     private void Awake()
     {
         #region Singleton
@@ -30,6 +36,7 @@ public class WaveManager : MonoBehaviour
 
     public void AddWave(WaveSpawner wave)
     {
+        maxWaves++;
         waves.Add(wave);
         onWaveChanged.Invoke();
     }
