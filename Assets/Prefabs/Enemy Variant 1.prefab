@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distance: 10
-  angle: 45
+  angle: 286.1
   targetLayers:
     serializedVersion: 2
     m_Bits: 128
@@ -5538,7 +5538,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointsAmount: 100
-  explosion: {fileID: 1370547061170585194}
 --- !u!114 &8301295909161790144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5622,8 +5621,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbb60d2a2bd20634bb482342b5695a5a, type: 3}
---- !u!198 &1370547061170585194 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 7837145177555102868, guid: dbb60d2a2bd20634bb482342b5695a5a, type: 3}
-  m_PrefabInstance: {fileID: 9207058919725290238}
-  m_PrefabAsset: {fileID: 0}
