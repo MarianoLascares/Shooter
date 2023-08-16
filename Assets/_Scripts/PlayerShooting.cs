@@ -1,11 +1,11 @@
-using System;
 using UnityEngine;
 
 public class PlayerShooting : MonoBehaviour
 {
-    public GameObject shootingPoint;
     private Animator _animator;
     public int bulletsAmount;
+
+    public Weapon weapon;
     
     private void Awake()
     {
@@ -16,20 +16,24 @@ public class PlayerShooting : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && Time.timeScale > 0)
         {
-            _animator.SetTrigger("Shot Bullet");
-            
-            Invoke("FireBullet", 0.4f);
+            if (bulletsAmount > 0 && weapon.ShootBullet("Player Bullet", 0.2f))
+            {
+                _animator.SetTrigger("Shoot Bullet");
+                bulletsAmount--;
+                if (bulletsAmount < 0)
+                {
+                    bulletsAmount = 0;
+                }
+            }
+            else
+            {
+                //TODO: sonido de no tengo balas
+            }
         }
     }
 
     void FireBullet()
     {
-        GameObject bullet = ObjectPool.SharedInstance.GetFirstPooledObject();
-        bullet.layer = LayerMask.NameToLayer("Player Bullet");
-        bullet.transform.position = shootingPoint.transform.position;
-        bullet.transform.rotation = shootingPoint.transform.rotation;
-        bullet.SetActive(true);
         
-        bulletsAmount--;
     }
 }
